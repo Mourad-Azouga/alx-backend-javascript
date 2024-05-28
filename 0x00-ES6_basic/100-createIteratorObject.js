@@ -1,13 +1,7 @@
-export default function taskBlock(trueOrFalse) {
-  const task = false;
-  const task2 = true;
-
-  /* eslint-disable no-unused-vars */
-  if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+export default function createIteratorObject(report) {
+  const result = [];
+  for (const idx of Object.values(report.allEmployees)) {
+    result.push(...idx);
   }
-  /* eslint-enable no-unused-vars */
-
-  return [task, task2];
+  return result;
 }
